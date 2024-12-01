@@ -16,7 +16,7 @@ public class Person {
         this.children = new ArrayList<>();
     }
 
-    public String getName() {
+    public String getName() {//получить
         return name;
     }
 
@@ -24,7 +24,7 @@ public class Person {
         return birthday;
     }
 
-    public void setMother(Person mother) {
+    public void setMother(Person mother) {//присвоить
         this.mother = mother;
     }
 
