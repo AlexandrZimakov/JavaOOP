@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14636fde-faec-455c-9edb-1a91766e198f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lesson2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/FamilyTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/FileOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/FileOperationsImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lesson1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lesson1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lesson1/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lesson1/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familyTree.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lesson1/FamilyTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lesson1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lesson1/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lesson2/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +44,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Прогамирование/Java/JavaOOP/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Lesson2.Main.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "D:/Прогамирование/Java/JavaOOP/src/Main.java"
   }
-}</component>
-  <component name="RunManager" selected="Application.Lesson2.Main">
+}]]></component>
+  <component name="RunManager" selected="Application.main.Main">
     <configuration name="Lesson2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lesson2.Main" />
       <module name="JavaOOP" />
@@ -72,10 +82,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="JavaOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lesson2.Main" />
+        <item itemvalue="Application.main.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Lesson2.Main" />
       </list>
     </recent_temporary>
   </component>
