@@ -1,49 +1,34 @@
 package model;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class FamilyTree implements Serializable, Iterable<Person> {
+
+public class FamilyTree<T> implements Serializable, Iterable<T> {
     private static final long serialVersionUID = 1L;
-    private List<Person> people;
-
+    private List<T> members;
     public FamilyTree() {
-        this.people = new ArrayList<>();
+        this.members = new ArrayList<>();
     }
-
-    public void addPerson(Person person) {
-        this.people.add(person);
+    public void addMember(T member) {
+        this.members.add(member);
     }
-
-    public List<Person> getChildren(Person parent) {
-        return parent.getChildren();
+    public List<T> getMembers() {
+        return members;
     }
-
-    public Person findPersonByName(String name) {
-        for (Person person : people) {
-            if (person.getName().equals(name)){
-                return person;
-            }
+    @Override
+    public Iterator<T> iterator() {
+        return members.iterator();
+    }
+    public void sortByName() {
+        Collections.sort(members, (p1, p2) -> p1.toString().compareTo(p2.toString()));
+    }
+    public void sortByBirthYear() {
+        if (members.get(0) instanceof Person) {
+            Collections.sort(members, (p1, p2) -> Integer.compare(((Person) p1).getBirthYear(), ((Person) p2).getBirthYear()));
         }
-        return null;
-    }
-
-    public List<Person> getPeople() {
-        return people;
-    }
-
-    public Iterator<Person> iterator(){
-        return people.iterator();
-    }
-
-    public void sortByName(){
-        Collections.sort(people,(p1, p2) -> p1.getName().compareTo(p2.getName()));
-    }
-
-    public void sortByBirthday(){
-        Collections.sort(people,(p1,p2) -> Integer.compare(p1.getBirthday(),p2.getBirthday()));
     }
 }
+
