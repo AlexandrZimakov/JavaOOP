@@ -6,7 +6,9 @@ import java.io.*;
 public class FileOperationsImpl<T> implements FileOperations<T> {
     @Override
     public void saveToFile(FamilyTree<T> familyTree, String fileName) throws IOException {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
+
+        try (FileOutputStream out = new FileOutputStream(fileName);
+             ObjectOutputStream oos = new ObjectOutputStream(out)) {
             oos.writeObject(familyTree);
         }
     }

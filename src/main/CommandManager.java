@@ -1,6 +1,10 @@
 package main;
 import model.FamilyTree;
 import model.Person;
+import service.FileOperations;
+import service.FileOperationsImpl;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -12,6 +16,7 @@ public class CommandManager {
         this.scanner = new Scanner(System.in);
     }
     public void start() {
+        FileOperations<Person> fileOps = new FileOperationsImpl<>();
         while (true) {
             System.out.println("Введите команду (add, list, sortByName, sortByBirthYear, save, load, exit):");
             String command = scanner.nextLine();
@@ -31,9 +36,21 @@ public class CommandManager {
                     listPeople();
                     break;
                 case "save":
-// implement save logic
+                    try {
+                        fileOps.saveToFile(familyTree, "familyTree.dat");
+                        System.out.println("\nFamily tree saved to file.");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
+// implement save logic
                 case "load":
+                    try {
+                        familyTree = fileOps.loadFromFile("familyTree.dat");
+                        System.out.println("Family tree loaded from file.");
+                    } catch (IOException | ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
 // implement load logic
                     break;
                 case "exit":
